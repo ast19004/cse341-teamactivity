@@ -12,12 +12,42 @@
         <h1>
           <%= title %>
         </h1>
-        <p>This is the placeholder for Team Activity 02</p>
+        <form method="POST" action="/ta02/addUser">
+          <fieldset>
+            <legend>Add User</legend>
+             <% if(!userCanBeAdded) { %>
+              <span class="message error"><i>That user is already in the list!</i></span>
+              <% } %>
+              <label for="username">Username:</label>
+              <input id="username" type="text" name="username">
+              <button type="submit">Add User</button>
+            </fieldset>
+        </form>
+        <br>
+        <form method="POST" action="/ta02/removeUser">
+          <fieldset>
+              <legend>Delete User</legend>
+              <% if(!userCanBeRemoved) { %>
+              <span class="message error"><i>Sorry, that user cannot be removed. It is not in list.</i></span>
+              <% } %>
+              <label for="username">Username:</label>
+              <input id="username" type="text" name="username">
+              <button type="submit">Delete User</button>
+            </fieldset>
+          </form> 
       </div>
     </div>
-    <div class="container">
-
-    </div>
+    <% if( users.length > 0) { %>
+      <div class="container">
+        <ul>
+          <% for(let user of users){ %>
+            <li><%= user %></li>
+          <% } %> 
+        </ul>
+      <% } else { %>
+        <h2>No users found!</h2>
+      <% }%>
+     <div>
 
 
 </body>

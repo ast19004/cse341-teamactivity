@@ -41,3 +41,10 @@
   width: 5rem;
   height: 5rem;
 }
+.message{
+  display: block;
+}
+.error{
+  color: rgb(247, 208, 164);
+  margin: 0.8rem 0;
+}
