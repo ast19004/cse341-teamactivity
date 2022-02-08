@@ -41,23 +41,7 @@
   width: 5rem;
   height: 5rem;
 }
-.message{
-  display: block;
-}
-.error{
-  color: rgb(247, 208, 164);
-  margin: 0.8rem 0;
-}
 
-/* ta03 */
-.product-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-around;
-  gap: 10rem 5rem;
-  padding: 2%;
-}
-
-.product img{
-  max-width: 100%;
+main{
+  margin: 2%;
 }
